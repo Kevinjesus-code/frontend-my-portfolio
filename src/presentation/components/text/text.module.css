@@ -1,0 +1,118 @@
+.fontSize {
+  margin: 0;
+}
+.font-80 {
+  font-size: 80px;
+}
+@media (max-width: 768px) {
+  .font-80 {
+    font-size: 40px;
+  }
+}
+.font-56 {
+  font-size: 56px;
+}
+@media (max-width: 768px) {
+  .font-56 {
+    font-size: 28px;
+  }
+}
+
+.font-23 {
+  font-size: 23px;
+}
+@media (max-width: 768px) {
+  .font-23 {
+    font-size: 18px;
+  }
+}
+
+.font-20 {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .font-20 {
+    font-size: 16px;
+  }
+}
+
+.font-34 {
+  font-size: 34px;
+}
+@media (max-width: 768px) {
+  .font-34 {
+    font-size: 28px;
+  }
+}
+
+.font-64 {
+  font-size: 64px;
+}
+@media (max-width: 768px) {
+  .font-64 {
+    font-size: 45px;
+  }
+}
+
+.font-18 {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .font-18 {
+    font-size: 16px;
+  }
+}
+
+.font-42 {
+  font-size: 42px;
+}
+@media (max-width: 768px) {
+  .font-42 {
+    font-size: 20px;
+  }
+}
+
+.font-50 {
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .font-50 {
+    font-size: 32px;
+  }
+}
+
+.font-16 {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .font-16 {
+    font-size: 12px;
+  }
+}
+
+.font-40 {
+  font-size: 40px;
+}
+@media (max-width: 768px) {
+  .font-40 {
+    font-size: 24px;
+  }
+}
+
+.font-28 {
+  font-size: 28px;
+}
+@media (max-width: 768px) {
+  .font-28 {
+    font-size: 24px;
+  }
+}
+
+.font-18 {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .font-28 {
+    font-size: 14px;
+  }
+}

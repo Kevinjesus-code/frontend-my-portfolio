@@ -1,0 +1,40 @@
+.header{
+    width: 100vw;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav h1{
+    cursor: pointer;
+    color:rgb(205, 92, 92);
+}
+.list{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #343a4041;
+    height: 55%;
+    border-radius: 2rem;
+}
+.list li{
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.span{
+    color: #fff;
+    font-size:28px
+}
