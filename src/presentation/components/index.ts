@@ -3,3 +3,6 @@ export { default as DSAText } from "./text";
 export { default as DSAButton } from "./button";
 export { default as DSAIconSocial } from "./iconSocial";
 export { default as DSAResponsiveNavbar } from "./responsiveNavbar";
+export { default as DSAIconCloud } from "./iconCloud";
+export { default as DSANavPortfolio } from "./navPortfolio";
+export { default as DSACardPortfolio } from "./cardPortofolio";

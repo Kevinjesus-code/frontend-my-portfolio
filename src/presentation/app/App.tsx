@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home } from "../ui";
+import { Home, Portfolio } from "../ui";
 import { DSAResponsiveNavbar } from "../components";
 import "./App.css";
 
@@ -12,7 +12,7 @@ function App() {
       case 1:
         return <h2>About me</h2>;
       case 2:
-        return <h2>Portfolio</h2>;
+        return <Portfolio />;
       case 3:
         return <h2>Contacto</h2>;
       default:

@@ -16,7 +16,7 @@ const NavbarMobile = ({ setPage }: NavbarMobileProps) => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <h1 className={styles.logo}>
+        <h1 className={styles.logo} onClick={() => handleSelect(0)}>
           dev <span className={styles.span}>Kevin.</span>
         </h1>
 
