@@ -35,7 +35,7 @@ const Home = () => {
 
           
           {showFrontend && (
-            <DSAText color="rgb(205, 92, 92)" variant="64" fontWeight={900}>
+            <DSAText color="rgb(205, 92, 92)" variant="56" fontWeight={900}>
               Frontend Developer Jr.
             </DSAText>
           )}
