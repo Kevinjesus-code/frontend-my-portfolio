@@ -63,3 +63,8 @@
 .btn-outline:hover img {
   filter: brightness(0) invert(1);
 }
+@media (max-width: 700px) {
+  .button p {
+    font-size: 0.65rem !important;
+  }
+}

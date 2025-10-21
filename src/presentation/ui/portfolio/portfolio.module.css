@@ -19,7 +19,7 @@
 }
 .containerBody {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-columns: repeat(auto-fill, 350px);
   justify-content: center; 
   gap: 1.5rem; 
   padding: 1rem; 
