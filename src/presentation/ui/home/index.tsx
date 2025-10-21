@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react";
 import Styles from "./home.module.css";
-import { DSAText, DSAButton, DSAIconSocial, DSAIconCloud } from "../../components";
+import { DSAText, DSAButton, DSAIconSocial } from "../../components";
 
 const Home = () => {
   const [studentText, setStudentText] = useState("");
@@ -54,7 +54,7 @@ const Home = () => {
       </div>
 
       <div className={Styles.containerImg}>
-        <DSAIconCloud />
+        {/* <DSAIconCloud /> */}
       </div>
     </div>
   );
