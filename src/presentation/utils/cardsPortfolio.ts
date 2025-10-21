@@ -16,7 +16,7 @@ export const CardsPortfolio: cardPortofolio[] = [
     title: "Portfolio Modern",
     description:
       "Sebuah website portofolio modern dengan animasi halus dan mode gelap responsif.",
-    image: "/public/assets/img/page2.png",
+    image: "/assets/img/page2.png",
     demoUrl: "https://kevinjesus-code.github.io/Travel-Agency/",
     detailsUrl: "/projects/portfolio-modern",
   },
@@ -25,7 +25,7 @@ export const CardsPortfolio: cardPortofolio[] = [
     title: "Portfolio Modern",
     description:
       "Sebuah website portofolio modern dengan animasi halus dan mode gelap responsif.",
-    image: "/public/assets/img/page3.png",
+    image: "/assets/img/page3.png",
     demoUrl: "https://kevinjesus-code.github.io/website-caja-huancayo/",
     detailsUrl: "/projects/portfolio-modern",
   },
