@@ -1,61 +1,71 @@
 .header {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
+
 .nav {
-  width: 85%;
-  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav h1 {
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
   cursor: pointer;
-  color: rgb(205, 92, 92);
-}
-.list {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #343a4041;
-  height: 55%;
-  border-radius: 2rem;
-}
-.list li {
-  list-style: none;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.85rem;
-}
-.span {
   color: #fff;
-  font-size: 28px;
+  transition: transform 0.3s ease;
 }
-.active {
-  background-color: rgb(205, 92, 92);
-  text-align: center;
-  padding: 0.5rem 3rem;
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.span {
+  color:#0284c7;
+}
+
+.list {
+
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+  background-color: #1a1a1a;
+  padding: 0.6rem  1.5rem;
   border-radius: 2rem;
+  box-shadow: 2px 6px 5px rgba(255, 255, 255, 0.053);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-@media (max-width: 900px) and (min-width: 600px) {
-  .list {
-    width: 60%;
-  }
-  .active {
-    background-color: rgb(205, 92, 92);
-    text-align: center;
-    padding: 0.5rem 2rem;
-    border-radius: 2rem;
-  }
-  .list li {
-    list-style: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 12px;
-  }
+
+.list li {
+  color: #727274;
+  cursor: pointer;
+  padding: 0.3rem 1.2rem;
+  transition: all 0.3s ease;
+  border-radius: 1.5rem;
+  
+}
+
+.list li:hover {
+  color: #ffffff;
+  background: #0284c7;
+}
+
+.list li.active {
+  color: #fff;
+  background:#0284c7;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
 }

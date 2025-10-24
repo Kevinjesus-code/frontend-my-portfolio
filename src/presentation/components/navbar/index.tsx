@@ -6,44 +6,36 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
-  const [activeIndex, setActiveIndex] = useState(0); // <-- nuevo estado
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuItems = ["Home", "About me", "Portfolio", "Contacto"];
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
     setPage(index);
+    setIsMenuOpen(false);
   };
 
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <h1 onClick={() => handleClick(0)}>
-            dev<span className={styles.span}>Kevin.</span>
+        <h1 className={styles.logo} onClick={() => handleClick(0)}>
+          dev<span className={styles.span}>Kevin.</span>
         </h1>
-        <ul className={styles.list}>
-          <li
-            className={activeIndex === 0 ? styles.active : ""}
-            onClick={() => handleClick(0)}
-          >
-            Home
-          </li>
-          <li
-            className={activeIndex === 1 ? styles.active : ""}
-            onClick={() => handleClick(1)}
-          >
-            About me
-          </li>
-          <li
-            className={activeIndex === 2 ? styles.active : ""}
-            onClick={() => handleClick(2)}
-          >
-            Portfolio
-          </li>
-          <li
-            className={activeIndex === 3 ? styles.active : ""}
-            onClick={() => handleClick(3)}
-          >
-            Contacto
-          </li>
+
+        <ul className={`${styles.list} ${isMenuOpen ? styles.active : ""}`}>
+          {menuItems.map((item, index) => (
+            <li
+              key={item}
+              className={activeIndex === index ? styles.active : ""}
+              onClick={() => handleClick(index)}
+              role="button"
+              tabIndex={0}
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

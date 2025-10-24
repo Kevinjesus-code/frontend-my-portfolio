@@ -1,0 +1,136 @@
+import type { cardCertificate } from "../types/cardCertificate";
+
+export const Certificates: cardCertificate[] = [
+  {
+    id: 1,
+    courseName: "Universidad Desarrollo WebFrontEnd Web Developer!",
+    platform: "Udemy",
+    logo: "/assets/img/Udemy-Logo.png",
+    instructor: "Global Mentoring Ing. Ubaldo Acosta",
+    completionDate: "2024-11-01",
+    duration: "30.5 horas",
+    skills: ["HTML", "CSS", "JavaScript"],
+    pdfUrl: "/assets/certificates/UC-a4da7b5e-ea0f-4efe-aeef-3ddd45c71118.pdf",
+  },
+  {
+    id: 2,
+    courseName:
+      "Aprende HTML5 y CSS3 de forma práctica [semantica, accesibilidad, responsive, flexbox, grid, menús]",
+    platform: "Udemy",
+    logo: "/assets/img/Udemy-Logo.png",
+    instructor: " Disco Duro de Roer",
+    completionDate: "2025-01-29",
+    duration: "21.5 horas",
+    skills: [
+      "HTML5 semántico",
+      "CSS3",
+      "Estructura y maquetación web",
+      "Diseño responsive (Media Queries)",
+      "Flexbox y Grid Layout",
+      "Accesibilidad web",
+      "Buenas prácticas de diseño y usabilidad",
+    ],
+
+    pdfUrl: "/assets/certificates/UC-0f01d65f-dd50-46af-aa8f-3016d6f2db42.pdf",
+  },
+  {
+    id: 3,
+    courseName: "Universidad JavaScript - De Cero a Experto JavaScript!",
+    platform: "Udemy",
+    logo: "/assets/img/Udemy-Logo.png",
+    instructor: "Global Mentoring Ing. Ubaldo Acosta",
+    completionDate: "2025-04-29",
+    duration: "44.5 horas",
+    skills: [
+      "JavaScript",
+      "Programación Orientada a Objetos (POO)",
+      "Funciones (Arrow Functions, Callbacks, Async/Await)",
+      "Manipulación del DOM y eventos",
+      "Manejo de errores",
+      "Estructuras de control y ciclos",
+      "Arreglos y objetos",
+      "Herencia y clases",
+      "Desarrollo de aplicaciones web interactivas",
+    ],
+    pdfUrl: "/assets/certificates/UC-ae3709b8-6ce1-4975-8fc1-f7d3588699f7.pdf",
+  },
+  {
+    id: 4,
+    courseName: "Curso profesional de Git",
+    platform: "Código Facilito",
+    logo: "/assets/img/Codigo-Facilito-logo.png",
+    instructor: "Código Facilito",
+    completionDate: "2025-05-26",
+    duration: "3.4 horas",
+    skills: [
+      "Control de versiones con Git",
+      "Gestión de repositorios locales y remotos",
+      "Ramas (branching) y fusión (merging)",
+      "Resolución de conflictos",
+      "Buenas prácticas en control de versiones",
+      "Colaboración en equipo con Git",
+    ],
+
+    pdfUrl: "/assets/certificates/Certificado-Curso-profesional-de-Git.pdf",
+  },
+  {
+    id: 5,
+    courseName: "Curso profesional de JavaScript",
+    platform: "Código Facilito",
+    logo: "/assets/img/Codigo-Facilito-logo.png",
+    instructor: "Código Facilito",
+    completionDate: "2025-05-28",
+    duration: "8.5 horas",
+    skills: [
+      "JavaScript avanzado",
+      "Funciones y contexto de ejecución",
+      "Programación orientada a objetos",
+      "Programación asíncrona (Promesas, Async/Await)",
+      "Manejo de módulos",
+      "Manipulación de arreglos y objetos",
+      "Expresiones regulares (Regex)",
+    ],
+
+    pdfUrl:
+      "/assets/certificates/Certificado-Curso-profesional-de-JavaScript.pdf",
+  },
+  {
+    id: 6,
+    courseName: "Curso de Visual Studio Code y GitHub Copilot",
+    platform: "Código Facilito",
+    logo: "/assets/img/Codigo-Facilito-logo.png",
+    instructor: "Código Facilito",
+    completionDate: "2025-05-29",
+    duration: "3.21 horas",
+    skills: [
+      "Uso profesional de Visual Studio Code",
+      "Depuración y ejecución de código",
+      "Integración con GitHub Copilot",
+      "Asistencia con inteligencia artificial en desarrollo",
+      "Productividad y personalización del entorno de trabajo",
+    ],
+
+    pdfUrl:
+      "/assets/certificates/Certificado-Curso-de-Visual-Studio-Code-y-GitHub-Copilot.pdf",
+  },
+  {
+    id: 7,
+    courseName: "Curso Profesional de Angular",
+    platform: "Código Facilito",
+    logo: "/assets/img/Codigo-Facilito-logo.png",
+    instructor: "Código Facilito",
+    completionDate: "2025-05-29",
+    duration: "5.32 horas",
+    skills: [
+      "Desarrollo de aplicaciones con Angular",
+      "Componentes y Directivas",
+      "Enrutamiento (Routing)",
+      "Manejo de formularios (FormControl y FormGroup)",
+      "Consumo de APIs con HTTP",
+      "Programación reactiva con RxJS",
+    ],
+
+    pdfUrl:
+      "/assets/certificates/Certificado-Curso-Profesional-de-Angular.pdf",
+  },
+];

@@ -1,8 +1,9 @@
-export  interface cardPortofolio {
+export  interface cardProject {
   id: number
   title: string
   description: string
   image: string
   demoUrl?: string
-  detailsUrl?: string
+  githubUrl?: string
+  Technologies: string[]
 }

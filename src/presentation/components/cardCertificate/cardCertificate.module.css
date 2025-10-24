@@ -1,0 +1,154 @@
+.certificateCard {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.certificateIcon {
+  color: #64ffda;
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.certificateIcon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.certificateInfo {
+  flex: 1;
+}
+
+.certificateTitle {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.certificateInstructor {
+  color: #8892b0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.platformBadge {
+  background:#063045;
+  color: #0284c7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+}
+
+.certificateMeta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8892b0;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #8892b0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+}
+
+.viewCertificateBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0284c7;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.viewCertificateBtn:hover {
+  opacity: 0.9;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+}
+
+.modalTitle {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #8892b0;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.pdfViewer {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .certificateCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .certificateMeta {
+    justify-content: center;
+  }
+
+  .skillsContainer {
+    justify-content: center;
+  }
+}

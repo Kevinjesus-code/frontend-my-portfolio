@@ -3,6 +3,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 .containerHeader {
   width: 100%;
@@ -18,10 +20,10 @@
   text-align: center;
 }
 .containerBody {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
-  justify-content: center; 
-  gap: 1.5rem; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem; 
 }
 @media (width<= 800px) {

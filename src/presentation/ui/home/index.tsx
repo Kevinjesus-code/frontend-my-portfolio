@@ -35,7 +35,7 @@ const Home = () => {
 
           
           {showFrontend && (
-            <DSAText color="rgb(205, 92, 92)" variant="56" fontWeight={900}>
+            <DSAText color="#0284c7" variant="56" fontWeight={900}>
               Frontend Developer Jr.
             </DSAText>
           )}
@@ -48,8 +48,8 @@ const Home = () => {
         </div>
 
         <div className={Styles.containerBtn}>
-          <DSAButton variant="outline">Download CV</DSAButton>
-          <DSAButton variant="outline">Contact me</DSAButton>
+          <DSAButton variant="solid" backgroundColor="#0284c7">Download CV</DSAButton>
+          <DSAButton variant="outline" color="#0284c7">Contact me</DSAButton>
         </div>
       </div>
 

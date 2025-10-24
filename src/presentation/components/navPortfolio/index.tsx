@@ -1,11 +1,16 @@
 import { useState } from "react";
 import Styles from "./navPortfolio.module.css";
 
-const NavPortfolio = () => {
+interface NavPortfolioProps {
+  onToggle: (showProjects: boolean) => void;
+}
+
+const NavPortfolio = ({ onToggle }: NavPortfolioProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
+    onToggle(index === 0);
   };
   return (
     <nav className={Styles.container}>
