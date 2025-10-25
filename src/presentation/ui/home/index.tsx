@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Styles from "./home.module.css";
 import { DSAText, DSAButton, DSAIconSocial } from "../../components";
 
@@ -18,7 +18,7 @@ const Home = () => {
         clearInterval(interval);
         setShowFrontend(true);
       }
-    }, 100); 
+    }, 100);
     return () => clearInterval(interval);
   }, []);
 
@@ -28,12 +28,8 @@ const Home = () => {
         <div>
           <DSAText>Hello World, I&apos;m Kevin</DSAText>
 
-          
-          <DSAText variant="40" >
-            {studentText}
-          </DSAText>
+          <DSAText variant="40">{studentText}</DSAText>
 
-          
           {showFrontend && (
             <DSAText color="#0284c7" variant="56" fontWeight={900}>
               Frontend Developer Jr.
@@ -42,20 +38,37 @@ const Home = () => {
         </div>
 
         <div className={Styles.containerIcon}>
-          <DSAIconSocial icon="/assets/svg/linkedin.svg" enlace="https://www.linkedin.com/in/kevinjesus-code/" />
-          <DSAIconSocial icon="assets/svg/github.svg" enlace="https://github.com/Kevinjesus-code" />
-          <DSAIconSocial icon="assets/svg/whatsapp.svg" enlace="https://api.whatsapp.com/send/?phone=51917397169&text=Hola+Kevin%2C+vi+tu+portafolio+y+me+interesa+contactarte+para+un+proyecto.&type=phone_number&app_absent=0" />
+          <DSAIconSocial
+            icon="/assets/svg/linkedin.svg"
+            enlace="https://www.linkedin.com/in/kevinjesus-code/"
+          />
+          <DSAIconSocial
+            icon="assets/svg/github.svg"
+            enlace="https://github.com/Kevinjesus-code"
+          />
+          <DSAIconSocial
+            icon="assets/svg/whatsapp.svg"
+            enlace="https://api.whatsapp.com/send/?phone=51917397169&text=Hola+Kevin%2C+vi+tu+portafolio+y+me+interesa+contactarte+para+un+proyecto.&type=phone_number&app_absent=0"
+          />
         </div>
 
         <div className={Styles.containerBtn}>
-          <DSAButton variant="solid" backgroundColor="#0284c7">Download CV</DSAButton>
-          <DSAButton variant="outline" color="#0284c7">Contact me</DSAButton>
+          <DSAButton
+            variant="solid"
+            backgroundColor="#0284c7"
+            downloadUrl="/assets/certificates/curriculumVitae.pdf"
+            downloadFilename="Curriculum Vitae.pdf"
+            
+          >
+            Download CV
+            
+          </DSAButton>
+          <DSAButton variant="outline" color="#0284c7">
+            Contact me
+          </DSAButton>
         </div>
       </div>
-
-      <div className={Styles.containerImg}>
-        {/* <DSAIconCloud /> */}
-      </div>
+      {/* <DSAIconCloud /> */}
     </div>
   );
 };

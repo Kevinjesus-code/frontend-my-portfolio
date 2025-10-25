@@ -17,51 +17,57 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  background: #000000; /* Fondo negro puro */
 }
 
 .global-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.5;
+  filter: blur(120px);
+  opacity: 0.6;
   pointer-events: none;
+  mix-blend-mode: screen;
 }
 
+/* Blob 1 - Azul Sky principal #0284c7 */
 .global-blob-1 {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   background: radial-gradient(
     circle,
-    rgba(139, 0, 0, 0.6) 0%,
-    rgba(139, 0, 0, 0) 70%
+    rgba(2, 132, 199, 0.6) 0%,
+    rgba(3, 105, 161, 0.4) 40%,
+    rgba(2, 132, 199, 0) 70%
   );
   top: -15%;
   left: -10%;
   animation: globalFloat1 22s ease-in-out infinite;
 }
 
-/* Blob 2 - Púrpura oscuro */
+/* Blob 2 - Azul Slate oscuro */
 .global-blob-2 {
-  width: 550px;
-  height: 550px;
+  width: 650px;
+  height: 650px;
   background: radial-gradient(
     circle,
-    rgba(75, 0, 130, 0.5) 0%,
-    rgba(75, 0, 130, 0) 70%
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(30, 41, 59, 0.6) 35%,
+    rgba(15, 23, 42, 0) 70%
   );
   bottom: -10%;
   right: -5%;
   animation: globalFloat2 26s ease-in-out infinite;
 }
 
-/* Blob 3 - Azul medianoche */
+/* Blob 3 - Gris Slate medio */
 .global-blob-3 {
-  width: 500px;
-  height: 500px;
+  width: 680px;
+  height: 680px;
   background: radial-gradient(
     circle,
-    rgba(25, 25, 112, 0.55) 0%,
-    rgba(25, 25, 112, 0) 70%
+    rgba(30, 41, 59, 0.8) 0%,
+    rgba(51, 65, 85, 0.5) 45%,
+    rgba(30, 41, 59, 0) 70%
   );
   top: 50%;
   left: 50%;
@@ -69,28 +75,30 @@
   animation: globalFloat3 24s ease-in-out infinite;
 }
 
-/* Blob 4 - Granate oscuro */
+/* Blob 4 - Azul Sky claro */
 .global-blob-4 {
-  width: 480px;
-  height: 480px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(
     circle,
-    rgba(128, 0, 32, 0.5) 0%,
-    rgba(128, 0, 32, 0) 70%
+    rgba(14, 165, 233, 0.5) 0%,
+    rgba(2, 132, 199, 0.3) 40%,
+    rgba(14, 165, 233, 0) 70%
   );
   top: 20%;
   right: 15%;
   animation: globalFloat4 28s ease-in-out infinite;
 }
 
-/* Blob 5 - Ciruela oscuro */
+/* Blob 5 - Azul profundo */
 .global-blob-5 {
-  width: 520px;
-  height: 520px;
+  width: 620px;
+  height: 620px;
   background: radial-gradient(
     circle,
-    rgba(102, 51, 153, 0.45) 0%,
-    rgba(102, 51, 153, 0) 70%
+    rgba(3, 105, 161, 0.6) 0%,
+    rgba(7, 89, 133, 0.4) 40%,
+    rgba(3, 105, 161, 0) 70%
   );
   bottom: 30%;
   left: 10%;
@@ -167,7 +175,7 @@
 @media (max-width: 1200px) {
   .global-blob {
     filter: blur(70px);
-    opacity: 0.4;
+    opacity: 0.35;
   }
   .global-blob-1 {
     width: 500px;
@@ -188,7 +196,7 @@
 @media (max-width: 900px) {
   .global-blob {
     filter: blur(60px);
-    opacity: 0.35;
+    opacity: 0.3;
   }
   .global-blob-1 {
     width: 400px;
@@ -211,7 +219,7 @@
 @media (max-width: 600px) {
   .global-blob {
     filter: blur(50px);
-    opacity: 0.3;
+    opacity: 0.25;
   }
   .global-blob-3,
   .global-blob-4 {
@@ -230,7 +238,7 @@
 @media (max-width: 400px) {
   .global-blob {
     filter: blur(40px);
-    opacity: 0.25;
+    opacity: 0.2;
   }
   .global-blob-1,
   .global-blob-2 {

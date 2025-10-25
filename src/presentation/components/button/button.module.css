@@ -1,7 +1,7 @@
 .button {
   cursor: pointer;
   text-align: center;
-  border-radius: 60px;
+  border-radius: 1rem;
   width: auto;
   height: auto;
   display: inline-flex;

@@ -10,9 +10,9 @@ export const CardsPortfolio: cardProject[] = [
     demoUrl: "https://kevinjesus-code.github.io/Studio-Design-Landing-Page/",
     githubUrl: "https://github.com/Kevinjesus-code/Studio-Design-Landing-Page",
     Technologies: [
-      "/assets/img/html-5.png",
-      "/assets/img/css-3.png",
-      "/assets/img/js.png",
+      "/assets/img/logos/html-5.png",
+      "/assets/img/logos/css-3.png",
+      "/assets/img/logos/js.png",
     ],
   },
   {
@@ -24,9 +24,9 @@ export const CardsPortfolio: cardProject[] = [
     demoUrl: "https://kevinjesus-code.github.io/Travel-Agency/",
     githubUrl: "https://github.com/Kevinjesus-code/Travel-Agency",
     Technologies: [
-      "/assets/img/html-5.png",
-      "/assets/img/css-3.png",
-      "/assets/img/js.png",
+      "/assets/img/logos/html-5.png",
+      "/assets/img/logos/css-3.png",
+      "/assets/img/logos/js.png",
     ],
   },
   {
@@ -38,10 +38,10 @@ export const CardsPortfolio: cardProject[] = [
     demoUrl: "https://kevinjesus-code.github.io/website-caja-huancayo/",
     githubUrl: "https://github.com/Kevinjesus-code/website-caja-huancayo",
     Technologies: [
-      "/assets/img/html-5.png",
-      "/assets/img/css-3.png",
-      "/assets/img/js.png",
-      "/assets/img/Bootstrap.png",
+      "/assets/img/logos/html-5.png",
+      "/assets/img/logos/css-3.png",
+      "/assets/img/logos/js.png",
+      "/assets/img/logos/Bootstrap.png",
     ],
   },
 ];

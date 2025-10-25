@@ -18,14 +18,17 @@ interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   backgroundColor?: string;
-  className?: string; 
+  className?: string;
+  // Nuevas propiedades para descarga
+  downloadUrl?: string;
+  downloadFilename?: string;
 }
 
 const Button = ({
   children,
   variant = "solid",
-  color = "#FFFFFF",
-  backgroundColor ="rgb(205, 92, 92)",
+  color = "#ffffffff",
+  backgroundColor = "#0284c7",
   colorHover = "#FFFFFF",
   padding = "0.8rem 2rem",
   iconLeft,
@@ -37,11 +40,13 @@ const Button = ({
   height,
   disabled = false,
   onClick,
-  className, 
+  className,
+  downloadUrl,
+  downloadFilename,
 }: ButtonProps) => {
   const ButtonStyles = {
-    "--button-color": disabled ? "rgba(212, 183, 249, 1)" : color,
-    "--button-color-hover": disabled ? "rgba(212, 183, 249, 1)" : colorHover,
+    "--button-color": disabled ? "#3094c7ff" : color,
+    "--button-color-hover": disabled ? "#3094c7ff" : colorHover,
     backgroundColor: disabled
       ? "#ddd"
       : variant === "solid"
@@ -54,6 +59,27 @@ const Button = ({
     color: disabled ? "#aaa" : color,
   } as React.CSSProperties;
 
+  const handleClick = () => {
+    if (disabled) return;
+
+    // Si hay URL de descarga, ejecutar la descarga
+    if (downloadUrl) {
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      if (downloadFilename) {
+        link.download = downloadFilename;
+      }
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Ejecutar onClick adicional si existe
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <button
       style={ButtonStyles}
@@ -63,7 +89,7 @@ const Button = ({
         ${styles.fontWeight} 
         ${className || ""}
       `}
-      onClick={!disabled ? onClick : undefined}
+      onClick={handleClick}
       disabled={disabled}
     >
       {iconLeft && (
@@ -79,7 +105,7 @@ const Button = ({
       </DSAText>
       {iconRight && (
         <img
-          src={`/svg/${iconRight}.svg`}
+          src={`assets/svg/${iconRight}.svg`}
           alt="icon right"
           width={iconSize}
           height={iconSize}

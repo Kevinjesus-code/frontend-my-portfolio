@@ -12,8 +12,6 @@ import { Certificates } from "../../utils/certificates";
 const Portfolio = () => {
   const [showProjects, setShowProjects] = useState(true);
 
-  console.log("Certificates data:", Certificates); // Para verificar los datos
-
   return (
     <div className={Styles.container}>
       <div className={Styles.containerHeader}>
@@ -33,14 +31,17 @@ const Portfolio = () => {
         </div>
       </div>
       <div className={Styles.containerBody}>
-        {showProjects
-          ? CardsPortfolio.map((card) => (
-              <DSACardProject key={card.id} {...card} />
-            ))
-          : Certificates.map((cert) => {
-              console.log("Certificate being rendered:", cert); // Verificar cada certificado
-              return <DSACardCertificate key={cert.id} certificate={cert} />;
-            })}
+        {showProjects ? (
+          CardsPortfolio.map((card) => (
+            <DSACardProject key={card.id} {...card} />
+          ))
+        ) : (
+          <div className={Styles.certificatesGrid}>
+            {Certificates.map((cert) => (
+              <DSACardCertificate key={cert.id} certificate={cert} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
