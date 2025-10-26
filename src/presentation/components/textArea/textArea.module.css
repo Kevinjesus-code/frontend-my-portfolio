@@ -1,0 +1,76 @@
+.inputForm {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  border: 1.5px solid rgba(100, 116, 139, 0.3);
+  box-shadow: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.inputForm:focus-within {
+  border-color: #0284c7;
+  box-shadow: 0 0 25px rgba(2, 132, 199, 0.3);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  margin-top: 0.125rem;
+}
+
+.inputForm:focus-within .icon {
+  opacity: 1;
+}
+
+.inputForm textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  resize: none;
+  min-height: 80px;
+  font-family: inherit;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.inputForm textarea::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.inputForm textarea:focus {
+  outline: none;
+}
+
+.inputForm textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.inputForm textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.inputForm textarea::-webkit-scrollbar-thumb {
+  background: rgba(2, 132, 199, 0.3);
+  border-radius: 4px;
+}
+
+.inputForm textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 132, 199, 0.5);
+}

@@ -58,12 +58,11 @@ const Home = () => {
             backgroundColor="#0284c7"
             downloadUrl="/assets/certificates/curriculumVitae.pdf"
             downloadFilename="Curriculum Vitae.pdf"
-            
+            iconRight="Download"
           >
             Download CV
-            
           </DSAButton>
-          <DSAButton variant="outline" color="#0284c7">
+          <DSAButton variant="outline" color="#0284c7" iconRight="Mail">
             Contact me
           </DSAButton>
         </div>

@@ -8,3 +8,8 @@ export { default as DSANavPortfolio } from "./navPortfolio";
 export { default as DSACardProject } from "./cardProject";
 export { default as DSACardCertificate } from "./cardCertificate";
 export { default as DSACardSkill } from "./cardSkill";
+export { default as DSAContactMeMessage } from "./contactMeMessage";
+export { default as DSAInputForm } from "./inputForm";
+export { default as DSATextArea } from "./textArea";
+export { default as DSASocialLink } from "./socialLink";
+export { default as DSACardSocialLinks } from "./cardSocialLinks";

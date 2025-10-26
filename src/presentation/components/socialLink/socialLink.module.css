@@ -1,0 +1,120 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1.5px solid rgba(100, 116, 139, 0.3);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.link.hovered::before {
+  left: 100%;
+}
+
+.link.hovered {
+  border-color: #0284c7;
+  box-shadow: 0 0 25px rgba(2, 132, 199, 0.3);
+  transform: translateX(4px);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(2, 133, 199, 0.466);
+  color: #0284c7;
+}
+
+.link.hovered .iconContainer {
+  background: rgba(2, 132, 199, 0.2);
+  border-color: rgba(2, 132, 199, 0.4);
+  transform: scale(1.05);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.platform {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: color 0.3s ease;
+}
+
+.link.hovered .platform {
+  color: #0ea5e9;
+}
+
+.username {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.arrowContainer {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(2, 132, 199, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+  color: #0284c7;
+}
+
+.link.hovered .arrowContainer {
+  opacity: 1;
+  transform: translateX(0);
+  background: rgba(2, 132, 199, 0.2);
+}
+
+@media (max-width: 768px) {
+  .link {
+    padding: 0.75rem 1rem;
+  }
+
+  .iconContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .platform {
+    font-size: 0.9rem;
+  }
+
+  .username {
+    font-size: 0.75rem;
+  }
+}

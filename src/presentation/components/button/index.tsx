@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./button.module.css";
 import { DSAText } from "..";
+import { icons, type IconName } from "../../utils/icons";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -9,8 +10,8 @@ interface ButtonProps {
   colorHover?: string;
   padding?: string;
   fontSize?: string;
-  iconLeft?: string;
-  iconRight?: string;
+  iconLeft?: IconName;
+  iconRight?: IconName;
   iconSize?: number;
   fontWeight?: number;
   width?: string;
@@ -19,7 +20,6 @@ interface ButtonProps {
   disabled?: boolean;
   backgroundColor?: string;
   className?: string;
-  // Nuevas propiedades para descarga
   downloadUrl?: string;
   downloadFilename?: string;
 }
@@ -27,7 +27,7 @@ interface ButtonProps {
 const Button = ({
   children,
   variant = "solid",
-  color = "#ffffffff",
+  color = "#ffffff",
   backgroundColor = "#0284c7",
   colorHover = "#FFFFFF",
   padding = "0.8rem 2rem",
@@ -44,11 +44,14 @@ const Button = ({
   downloadUrl,
   downloadFilename,
 }: ButtonProps) => {
+  const IconLeftComponent = iconLeft ? icons[iconLeft] : null;
+  const IconRightComponent = iconRight ? icons[iconRight] : null;
+
   const ButtonStyles = {
-    "--button-color": disabled ? "#3094c7ff" : color,
-    "--button-color-hover": disabled ? "#3094c7ff" : colorHover,
+    "--button-color": disabled ? "#475569" : backgroundColor,
+    "--button-color-hover": disabled ? "#475569" : colorHover,
     backgroundColor: disabled
-      ? "#ddd"
+      ? "#1e293b"
       : variant === "solid"
       ? backgroundColor
       : "transparent",
@@ -56,13 +59,12 @@ const Button = ({
     width,
     height,
     "--fontWeight": fontWeight,
-    color: disabled ? "#aaa" : color,
+    color: disabled ? "#64748b" : color,
   } as React.CSSProperties;
 
   const handleClick = () => {
     if (disabled) return;
 
-    // Si hay URL de descarga, ejecutar la descarga
     if (downloadUrl) {
       const link = document.createElement("a");
       link.href = downloadUrl;
@@ -74,7 +76,6 @@ const Button = ({
       document.body.removeChild(link);
     }
 
-    // Ejecutar onClick adicional si existe
     if (onClick) {
       onClick();
     }
@@ -92,23 +93,21 @@ const Button = ({
       onClick={handleClick}
       disabled={disabled}
     >
-      {iconLeft && (
-        <img
-          src={`/svg/${iconLeft}.svg`}
-          alt="icon left"
-          width={iconSize}
-          height={iconSize}
+      {IconLeftComponent && (
+        <IconLeftComponent 
+          size={iconSize} 
+          strokeWidth={2}
+          color={disabled ? "#64748b" : color}
         />
       )}
-      <DSAText fontWeight={fontWeight} fontSize={fontSize} color={color}>
+      <DSAText fontWeight={fontWeight} fontSize={fontSize} color={disabled ? "#64748b" : color}>
         {children}
       </DSAText>
-      {iconRight && (
-        <img
-          src={`assets/svg/${iconRight}.svg`}
-          alt="icon right"
-          width={iconSize}
-          height={iconSize}
+      {IconRightComponent && (
+        <IconRightComponent 
+          size={iconSize} 
+          strokeWidth={2}
+          color={disabled ? "#64748b" : color}
         />
       )}
     </button>

@@ -1,11 +1,16 @@
+import { DSAContactMeMessage, DSACardSocialLinks } from "../../components";
+import Styles from "./contacMe.module.css";
 
-
-const ContactMe =()=> {
+const ContactMe = () => {
   return (
-    <>
-    <div>Contact Me</div>
-    </>
-  )
-}
+    <div className={Styles.container}>
+     
+        <DSAContactMeMessage />
+        <DSACardSocialLinks />
 
-export default ContactMe
+
+    </div>
+  );
+};
+
+export default ContactMe;

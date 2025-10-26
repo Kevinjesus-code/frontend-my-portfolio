@@ -1,0 +1,64 @@
+.inputForm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  border: 1.5px solid rgba(100, 116, 139, 0.3);
+  box-shadow: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.inputForm:focus-within {
+  border-color: #0284c7;
+  box-shadow: 0 0 25px rgba(2, 132, 199, 0.3);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.inputForm:focus-within .icon {
+  opacity: 1;
+}
+
+.inputForm input {
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.inputForm input::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.inputForm input:focus {
+  outline: none;
+}
+
+.inputForm input:-webkit-autofill,
+.inputForm input:-webkit-autofill:hover,
+.inputForm input:-webkit-autofill:focus,
+.inputForm input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #e2e8f0;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px transparent;
+}

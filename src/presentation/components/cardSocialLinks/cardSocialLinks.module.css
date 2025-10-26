@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1.5rem;
+  max-height: 300px;
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

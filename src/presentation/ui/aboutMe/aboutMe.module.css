@@ -1,53 +1,224 @@
 .container {
   width: 90%;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
+  animation: fadeIn 0.6s ease-out;
+  
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .containerHeader {
   width: 100%;
   text-align: center;
+  animation: slideDown 0.8s ease-out;
 }
-.containerBody {
-  display: flex;
-  
-  p{
-    text-align: justify;
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.containerBody {
+  display: flex;
+  gap: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.containerBody p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
 .containerBody > div {
   flex: 1;
 }
-.containerBody > div:nth-child(1) {
+
+.leftSection {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  padding: 0 1.2rem;
+  gap: 2rem;
 }
 
-.containerBody div :nth-child(3) {
+.containerInfo {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.containerInfo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0284c7 0%, transparent 100%);
+  border-radius: 2px;
+}
+
+.containerDescription {
+  opacity: 0.9;
+}
+
+.containerBtn {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-.containerBtn{
-    margin-top: 2rem;
+.containerBtn > * {
+  transition: transform 0.3s ease;
 }
 
-.containerInfo :nth-child(1) {
-  color: #0284c7;
+.containerBtn > *:hover {
+  transform: translateY(-2px);
 }
+
 .containerFooter {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  background: rgba(15, 23, 42, 0.3);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1.5px solid rgba(2, 132, 199, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
+
+.containerFooter:hover {
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 0 30px rgba(2, 132, 199, 0.15);
+}
+
 .containerHeaderSkills {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  position: relative;
+  padding-bottom: 0.8rem;
 }
+
+.containerHeaderSkills::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #0284c7 0%, transparent 50%);
+}
+
+.skillIcon {
+  color: #0284c7;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 .containerLogoSkills {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.greeting {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  font-size: 1.2em;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(14deg);
+  }
+  20%, 40% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .containerBody {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .containerBtn {
+    flex-direction: column;
+  }
+
+  .containerBtn > * {
+    width: 100%;
+  }
+
+  .containerFooter {
+    padding: 1.5rem;
+  }
+
+  .container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    gap: 2.5rem;
+  }
+
+  .containerFooter {
+    padding: 1.25rem;
+  }
+
+  .containerLogoSkills {
+    gap: 0.75rem;
+  }
 }
