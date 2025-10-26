@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 
 interface NavbarProps {
   setPage: (page: number) => void;
+  currentPage: number;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
+const Navbar = ({ setPage,currentPage }: NavbarProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,6 +17,12 @@ const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
     setPage(index);
     setIsMenuOpen(false);
   };
+  useEffect(() => {
+    setActiveIndex(currentPage);
+  }, [currentPage]);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className={styles.header}>
@@ -24,7 +31,25 @@ const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
           dev<span className={styles.span}>Kevin.</span>
         </h1>
 
-        <ul className={`${styles.list} ${isMenuOpen ? styles.active : ""}`}>
+        {/* Botón hamburguesa (solo visible en mobile) */}
+        <button
+          className={`${styles.hamburger} ${isMenuOpen ? styles.active : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Overlay para mobile */}
+        <div
+          className={`${styles.overlay} ${isMenuOpen ? styles.open : ""}`}
+          onClick={toggleMenu}
+        ></div>
+
+        {/* Menú (desktop y mobile) */}
+        <ul className={`${styles.list} ${isMenuOpen ? styles.mobileOpen : ""}`}>
           {menuItems.map((item, index) => (
             <li
               key={item}
@@ -32,6 +57,11 @@ const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
               onClick={() => handleClick(index)}
               role="button"
               tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  handleClick(index);
+                }
+              }}
             >
               {item}
             </li>

@@ -14,8 +14,7 @@ type Variant =
   | "16"
   | "40"
   | "28"
-  | "18";;
-
+  | "18";
 
 interface IProps {
   children: React.ReactNode;

@@ -3,7 +3,13 @@ import { DSAButton, DSAText, DSACardSkill } from "../../components";
 import { Skills } from "../../utils/skills";
 import { icons } from "../../utils/icons";
 
-const AboutMe = () => {
+interface AboutMeProps {
+  setPage: (page: number) => void;
+}
+const AboutMe = ({ setPage }: AboutMeProps) => {
+  const handleClick = () => {
+    setPage(2);
+  };
   return (
     <div className={Styles.container}>
       {/* Header Section */}
@@ -63,8 +69,13 @@ const AboutMe = () => {
             >
               Download CV
             </DSAButton>
-            <DSAButton variant="outline" color="#0284c7" iconRight="Mail">
-              Contact Me
+            <DSAButton
+              variant="outline"
+              color="#0284c7"
+              iconRight="Code"
+              onClick={handleClick}
+            >
+              Projects
             </DSAButton>
           </div>
         </div>

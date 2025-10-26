@@ -1,5 +1,5 @@
 .certificateCard {
-  max-width:1100px ;
+  max-width: 1100px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
@@ -47,7 +47,7 @@
 }
 
 .platformBadge {
-  background:#063045;
+  background: #063045;
   color: #0284c7;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;

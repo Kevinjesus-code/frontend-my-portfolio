@@ -2,7 +2,7 @@
   width: 85%;
   height: calc(100vh - 100px);
   display: flex;
-  
+
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -35,4 +35,3 @@
     display: none;
   }
 }
-

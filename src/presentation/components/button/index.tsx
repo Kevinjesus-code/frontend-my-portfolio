@@ -94,18 +94,22 @@ const Button = ({
       disabled={disabled}
     >
       {IconLeftComponent && (
-        <IconLeftComponent 
-          size={iconSize} 
+        <IconLeftComponent
+          size={iconSize}
           strokeWidth={2}
           color={disabled ? "#64748b" : color}
         />
       )}
-      <DSAText fontWeight={fontWeight} fontSize={fontSize} color={disabled ? "#64748b" : color}>
+      <DSAText
+        fontWeight={fontWeight}
+        fontSize={fontSize}
+        color={disabled ? "#64748b" : color}
+      >
         {children}
       </DSAText>
       {IconRightComponent && (
-        <IconRightComponent 
-          size={iconSize} 
+        <IconRightComponent
+          size={iconSize}
           strokeWidth={2}
           color={disabled ? "#64748b" : color}
         />

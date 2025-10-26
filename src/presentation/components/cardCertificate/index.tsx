@@ -1,5 +1,5 @@
 import Styles from "./cardCertificate.module.css";
-import {Calendar, Clock, ExternalLink, X } from "lucide-react";
+import { Calendar, Clock, ExternalLink, X } from "lucide-react";
 import { useState } from "react";
 
 interface Certificate {
@@ -72,7 +72,10 @@ const CardCertificate = ({ certificate }: CardCertificateProps) => {
         <div className={Styles.modal}>
           <div className={Styles.modalHeader}>
             <div className={Styles.modalTitle}>{certificate.courseName}</div>
-            <button className={Styles.closeBtn} onClick={() => setShowModal(false)}>
+            <button
+              className={Styles.closeBtn}
+              onClick={() => setShowModal(false)}
+            >
               <X size={20} />
             </button>
           </div>

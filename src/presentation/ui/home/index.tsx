@@ -1,12 +1,19 @@
 import { useState, useEffect } from "react";
 import Styles from "./home.module.css";
 import { DSAText, DSAButton, DSAIconSocial } from "../../components";
+interface HomeProps {
+  setPage: (page: number) => void;
+}
 
-const Home = () => {
+const Home = ({setPage}:HomeProps) => {
   const [studentText, setStudentText] = useState("");
   const [showFrontend, setShowFrontend] = useState(false);
 
   const studentFullText = "I'm a Systems Engineering student and";
+  const handleClick = () => {
+    setPage(3);
+    
+  }
 
   useEffect(() => {
     let index = -1;
@@ -62,7 +69,7 @@ const Home = () => {
           >
             Download CV
           </DSAButton>
-          <DSAButton variant="outline" color="#0284c7" iconRight="Mail">
+          <DSAButton variant="outline" color="#0284c7" iconRight="Mail" onClick={handleClick}>
             Contact me
           </DSAButton>
         </div>

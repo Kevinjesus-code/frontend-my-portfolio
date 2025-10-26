@@ -16,7 +16,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -150,18 +150,16 @@
   opacity: 0.5;
 }
 
-/* Text inside button */
 .button > * {
   position: relative;
   z-index: 1;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .button p {
     font-size: 0.65rem !important;
   }
-  
+
   .button {
     border-radius: 10px;
   }

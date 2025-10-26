@@ -1,10 +1,11 @@
 
 .containerContactMe{
     width: 100%;
-    max-width: 500px;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
 }
 .containerContactMe p{
     color: #ffffff;
