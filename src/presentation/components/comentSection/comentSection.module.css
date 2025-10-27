@@ -4,7 +4,7 @@
   border: 1.5px solid rgba(100, 116, 139, 0.3);
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 1400px;
+  max-width: 1700px;
 }
 
 .header {
@@ -69,4 +69,18 @@
   max-height: 600px;
   overflow-y: auto;
   padding-right: 8px;
+}
+.error {
+    background-color: #fee;
+    border: 1px solid #fcc;
+    color: #c33;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
 }

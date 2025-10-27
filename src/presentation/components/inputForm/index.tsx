@@ -17,7 +17,7 @@ const InputForm = ({
   type,
   placeholder,
   icon,
-  variant,
+  variant = 1,
   label,
   required,
   value: externalValue,
@@ -27,7 +27,6 @@ const InputForm = ({
   const [isFocused, setIsFocused] = useState(false);
   const [internalValue, setInternalValue] = useState("");
 
-  // Determinar si el componente es controlado o no controlado
   const isControlled = externalValue !== undefined;
   const value = isControlled ? externalValue : internalValue;
 
@@ -42,7 +41,7 @@ const InputForm = ({
   };
 
   return (
-    <div className={Styles.inputFormContainer}>
+    <div className={`${Styles.inputFormContainer} ${Styles[`variant${variant}`] || ''}`}>
       {label && (
         <label className={Styles.label}>
           {label}

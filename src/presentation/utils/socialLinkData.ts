@@ -4,7 +4,7 @@ export const socialLinks: SocialLinkData[] = [
   {
     id: 1,
     platform: "GitHub",
-    username: "@kevinmore",
+    username: "@kevinjesus-code",
     url: "https://github.com/Kevinjesus-code",
     image: "/assets/svg/github.svg", 
   },
@@ -16,10 +16,10 @@ export const socialLinks: SocialLinkData[] = [
     image: "/assets/svg/linkedin.svg", 
   },
   {
-    id: 3,
-    platform: "Gmail",
-    username: "kevinjesusmoresandoval@gmail.com",
-    url: "mailto:kevinjesusmoresandoval@gmail.com",
-    image: "/assets/svg/mail.svg", 
-  },
+  id: 3,
+  platform: "Gmail",
+  username: "kevinjesusmoresandoval@gmail.com",
+  url: "mailto:kevinjesusmoresandoval@gmail.com?subject=Hello%20Kevin&body=Hi%20there!",
+  image: "/assets/svg/mail.svg", 
+}
 ];

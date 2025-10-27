@@ -18,6 +18,7 @@ import {
   Code,        
   Award,       
   ExternalLink,
+  Copy,
   type LucideIcon
 } from "lucide-react";
 
@@ -41,6 +42,7 @@ export const icons = {
   Code,        
   Award,       
   ExternalLink,
+  Copy,
 } as const;
 
 export type IconName = keyof typeof icons;
