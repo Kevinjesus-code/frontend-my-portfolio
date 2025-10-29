@@ -1,11 +1,12 @@
 .certificateCard {
-  max-width: 1100px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: start;
   transition: transform 0.3s ease;
 }
 
@@ -29,13 +30,17 @@
 }
 
 .certificateInfo {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
 }
 
 .certificateTitle {
   font-size: 1.25rem;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  line-height: 1.3;
 }
 
 .certificateInstructor {
@@ -43,7 +48,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .platformBadge {
@@ -52,12 +57,13 @@
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 .certificateMeta {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .metaItem {
@@ -65,12 +71,20 @@
   align-items: center;
   gap: 0.5rem;
   color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.metaItem svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .skillsContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .skillTag {
@@ -79,6 +93,24 @@
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.moreSkillsBtn {
+  background: rgba(2, 132, 199, 0.2);
+  color: #0284c7;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.moreSkillsBtn:hover {
+  background: rgba(2, 132, 199, 0.3);
+  border-color: rgba(2, 132, 199, 0.5);
 }
 
 .viewCertificateBtn {
@@ -92,6 +124,9 @@
   border-radius: 8px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  white-space: nowrap;
+  height: fit-content;
+  font-weight: 600;
 }
 
 .viewCertificateBtn:hover {
@@ -108,6 +143,7 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  padding-top: 5rem;
 }
 
 .modalHeader {
@@ -129,6 +165,13 @@
   color: #8892b0;
   cursor: pointer;
   padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  color: #fff;
 }
 
 .pdfViewer {
@@ -139,16 +182,81 @@
 
 @media (max-width: 768px) {
   .certificateCard {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .certificateIcon {
+    width: 70px;
+    height: 70px;
+    padding: 0.75rem;
+    margin: 0 auto;
+  }
+
+  .certificateInfo {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .certificateTitle {
+    font-size: 1rem;
+    font-weight: 700;
     text-align: center;
+  }
+
+  .certificateInstructor {
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .platformBadge {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
   }
 
   .certificateMeta {
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .metaItem {
+    font-size: 0.85rem;
+  }
+
+  .metaItem svg {
+    width: 14px;
+    height: 14px;
   }
 
   .skillsContainer {
     justify-content: center;
+  }
+
+  .skillTag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .moreSkillsBtn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .viewCertificateBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modalHeader {
+    padding: 1rem;
+  }
+
+  .modalTitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 }

@@ -10,7 +10,7 @@ function App() {
       case 0:
         return <Home setPage={setPage} />;
       case 1:
-        return <AboutMe setPage={setPage}/>;
+        return <AboutMe setPage={setPage} />;
       case 2:
         return <Portfolio />;
       case 3:

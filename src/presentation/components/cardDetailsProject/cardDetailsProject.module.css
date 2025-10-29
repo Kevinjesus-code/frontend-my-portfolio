@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 10000;
   padding: 1rem;
 }
 
@@ -22,13 +22,10 @@
   height: 100%;
   overflow-y: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem 1rem;
-  padding-top: 100px !important;
 }
-
-
 
 /* Blobs animados */
 .blob1,
@@ -172,8 +169,6 @@
     transform: translate(-80px, 50px) scale(0.92) rotate(270deg);
   }
 }
-
-/* Body del contenido */
 .containerBody {
   width: 90%;
   max-width: 1400px;
@@ -185,7 +180,6 @@
   z-index: 10;
 }
 
-/* Botón Back mejorado */
 .backButton {
   display: flex;
   align-items: center;
@@ -201,6 +195,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   width: fit-content;
+  margin-top: 80px;
 }
 
 .backButton:hover {
@@ -210,7 +205,6 @@
   box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
 }
 
-/* Grid de contenido */
 .containerText {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
@@ -226,7 +220,6 @@
   min-width: 0;
 }
 
-/* Header del proyecto */
 .projectHeader {
   display: flex;
   flex-direction: column;
@@ -240,7 +233,6 @@
   border-radius: 2px;
 }
 
-/* Sección de descripción */
 .descriptionSection {
   padding: 1.5rem;
   background: rgba(15, 23, 42, 0.4);
@@ -248,8 +240,6 @@
   border-radius: 12px;
   backdrop-filter: blur(10px);
 }
-
-/* Sección de tecnologías */
 .technologiesSection {
   display: flex;
   flex-direction: column;
@@ -321,8 +311,6 @@
   display: block;
   object-fit: cover;
 }
-
-/* Contenedores de links */
 .linksContainerDesktop {
   display: flex;
   flex-wrap: wrap;
@@ -430,6 +418,7 @@
   .containerBody {
     width: 100%;
     gap: 1.5rem;
+    padding-top: 1rem;
   }
 
   .backButton {
@@ -485,6 +474,7 @@
 
   .containerBody {
     gap: 1rem;
+    padding-top: 0.5rem;
   }
 
   .backButton {

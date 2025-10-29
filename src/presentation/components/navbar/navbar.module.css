@@ -7,6 +7,7 @@
   background: rgba(15, 23, 42, 0);
   backdrop-filter: blur(10px);
   border-bottom: 1.5px solid rgba(100, 116, 139, 0.3);
+  height: 5rem !important;
 }
 
 .nav {
@@ -24,7 +25,6 @@
   cursor: pointer;
   margin: 0;
   transition: color 0.3s ease;
-  z-index: 1001;
 }
 
 .logo:hover {
@@ -85,6 +85,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 .list li {

@@ -28,31 +28,26 @@ export const Skills: skill[] = [
   },
   {
     id: 6,
-    name: "Tailwind CSS",
-    image: "/assets/img/logos/tailwind.png",
-  },
-  {
-    id: 7,
     name: "Bootstrap",
     image: "/assets/img/logos/Bootstrap.png",
   },
   {
-    id: 8,
+    id: 7,
     name: "Node.js",
     image: "/assets/img/logos/node.js.png",
   },
   {
-    id: 9,
+    id: 8,
     name: "Figma",
     image: "/assets/img/logos/figma.png",
   },
   {
-    id: 10,
+    id: 9,
     name: "Git",
     image: "/assets/img/logos/git.png",
   },
   {
-    id: 11,
+    id: 10,
     name: "GitHub",
     image: "/assets/img/logos/github.png",
   },    

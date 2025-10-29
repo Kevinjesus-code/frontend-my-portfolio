@@ -18,7 +18,7 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  background: #000000; /* Fondo negro puro */
+  background: #000000; 
 }
 
 .global-blob {

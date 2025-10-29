@@ -16,9 +16,10 @@ const Portfolio = () => {
     <div className={Styles.container}>
       <div className={Styles.containerHeader}>
         <div className={Styles.containerText}>
-          <DSAText variant="40" color="rgba(255, 255, 255, 1)">
-            Portfolio Showcase
-          </DSAText>
+         <DSAText variant="42" color="
+#0284c7" fontWeight={800}>
+          Portfolio Showcase
+        </DSAText>
 
           <DSAText variant="16" color="rgba(255, 255, 255, 1)">
             Explore my journey through projects, certifications, and technical

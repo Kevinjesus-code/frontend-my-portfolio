@@ -28,20 +28,20 @@ const CardDetailsProject = ({
       <div className={Styles.blob3}></div>
       <div className={Styles.blob4}></div>
       <div className={Styles.blob5}></div>
-      
+
       <div className={Styles.containerScroll}>
         <div className={Styles.containerBody}>
-          {/* Botón Back mejorado */}
           <button className={Styles.backButton} onClick={() => setOpen(false)}>
             <ArrowLeft size={20} />
             <span>Back to Projects</span>
           </button>
-          
+
           <div className={Styles.containerText}>
-            {/* Columna Izquierda - Info del Proyecto */}
             <div className={Styles.leftColumn}>
               <div className={Styles.projectHeader}>
-                <Text variant="50" color="#0284c7">{title}</Text>
+                <Text variant="50" fontWeight={800} color="#0284c7">
+                  {title}
+                </Text>
                 <div className={Styles.divider}></div>
               </div>
 
@@ -57,21 +57,20 @@ const CardDetailsProject = ({
                 <div className={Styles.techGrid}>
                   {technologies.map((tech, index) => (
                     <div key={index} className={Styles.techItem}>
-                      <img 
-                        src={tech} 
-                        alt={`Technology ${index + 1}`} 
-                        className={Styles.techIcon} 
+                      <img
+                        src={tech}
+                        alt={`Technology ${index + 1}`}
+                        className={Styles.techIcon}
                       />
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Links para mobile - aparecen debajo de las tecnologías */}
               <div className={Styles.linksContainerMobile}>
                 {demoUrl && (
-                  <a 
-                    href={demoUrl} 
+                  <a
+                    href={demoUrl}
                     className={Styles.linkButton}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -81,8 +80,8 @@ const CardDetailsProject = ({
                   </a>
                 )}
                 {githubUrl && (
-                  <a 
-                    href={githubUrl} 
+                  <a
+                    href={githubUrl}
                     className={`${Styles.linkButton} ${Styles.secondary}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -94,19 +93,21 @@ const CardDetailsProject = ({
               </div>
             </div>
 
-            {/* Columna Derecha - Imagen y Links */}
             <div className={Styles.rightColumn}>
               <div className={Styles.imageWrapper}>
                 <div className={Styles.imageContainer}>
-                  <img src={image} alt={title} className={Styles.projectImage} />
+                  <img
+                    src={image}
+                    alt={title}
+                    className={Styles.projectImage}
+                  />
                 </div>
               </div>
 
-              {/* Links para desktop */}
               <div className={Styles.linksContainerDesktop}>
                 {demoUrl && (
-                  <a 
-                    href={demoUrl} 
+                  <a
+                    href={demoUrl}
                     className={Styles.linkButton}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -116,8 +117,8 @@ const CardDetailsProject = ({
                   </a>
                 )}
                 {githubUrl && (
-                  <a 
-                    href={githubUrl} 
+                  <a
+                    href={githubUrl}
                     className={`${Styles.linkButton} ${Styles.secondary}`}
                     target="_blank"
                     rel="noopener noreferrer"

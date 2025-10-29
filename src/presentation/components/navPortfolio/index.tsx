@@ -28,7 +28,7 @@ const NavPortfolio = ({ onToggle }: NavPortfolioProps) => {
           className={activeIndex === 1 ? Styles.active : ""}
           onClick={() => handleClick(1)}
         >
-          Certifications
+          certificates
           <icons.Award size={25} strokeWidth={2} />
         </li>
       </ul>

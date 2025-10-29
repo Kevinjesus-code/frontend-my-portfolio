@@ -23,7 +23,7 @@ const SocialLink = ({ platform, username, url, image }: SocialLinkProps) => {
       try {
         await navigator.clipboard.writeText(email);
         setShowCopied(true);
-        setTimeout(() => setShowCopied(false), 2000);
+        setTimeout(() => setShowCopied(false), 1000);
       } catch (err) {
         console.error("Error al copiar:", err);
         alert(`Email: ${email}`);

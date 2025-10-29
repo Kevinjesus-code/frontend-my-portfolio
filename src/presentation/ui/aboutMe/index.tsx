@@ -1,6 +1,5 @@
 import Styles from "./aboutMe.module.css";
-import { DSAButton, DSAText, DSACardSkill } from "../../components";
-import { Skills } from "../../utils/skills";
+import { DSAButton, DSAText, DSASkillsCarousel } from "../../components";
 import { icons } from "../../utils/icons";
 
 interface AboutMeProps {
@@ -12,7 +11,6 @@ const AboutMe = ({ setPage }: AboutMeProps) => {
   };
   return (
     <div className={Styles.container}>
-      {/* Header Section */}
       <div className={Styles.containerHeader}>
         <DSAText variant="42" color="#0284c7" fontWeight={800}>
           About Me
@@ -22,10 +20,7 @@ const AboutMe = ({ setPage }: AboutMeProps) => {
           <span className={Styles.greeting}>💻</span>
         </DSAText>
       </div>
-
-      {/* Body Section */}
       <div className={Styles.containerBody}>
-        {/* Left Section - Main Info */}
         <div className={Styles.leftSection}>
           <div className={Styles.containerInfo}>
             <DSAText variant="28" color="#0284c7" fontWeight={800}>
@@ -91,15 +86,7 @@ const AboutMe = ({ setPage }: AboutMeProps) => {
               className={Styles.skillIcon}
             />
           </div>
-          <div className={Styles.containerLogoSkills}>
-            {Skills.map((skill) => (
-              <DSACardSkill
-                key={skill.id}
-                name={skill.name}
-                image={skill.image}
-              />
-            ))}
-          </div>
+          <DSASkillsCarousel />
         </div>
       </div>
     </div>

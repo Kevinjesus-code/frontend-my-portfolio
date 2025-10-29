@@ -1,19 +1,131 @@
+.containerContactMe {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2.5rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(2, 132, 199, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.containerContactMe{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.containerContactMe p{
-    color: #ffffff;
-    font-weight: 100;
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.containerBtn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(2, 132, 199, 0.6);
+  }
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0 0;
+  letter-spacing: 0.3px;
+}
+
+.decorativeLine {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #0284c7 20%,
+    #0284c7 80%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(2, 132, 199, 0.5);
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.containerBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.statusMessage {
+  text-align: center;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.success {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.15) 0%,
+    rgba(34, 197, 94, 0.05) 100%
+  );
+  color: #22c55e;
+  border: 2px solid rgba(34, 197, 94, 0.4);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.25);
+}
+
+.error {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.15) 0%,
+    rgba(239, 68, 68, 0.05) 100%
+  );
+  color: #ef4444;
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.25);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .containerContactMe {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
 }

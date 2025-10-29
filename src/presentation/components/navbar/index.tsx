@@ -6,7 +6,7 @@ interface NavbarProps {
   currentPage: number;
 }
 
-const Navbar = ({ setPage,currentPage }: NavbarProps) => {
+const Navbar = ({ setPage, currentPage }: NavbarProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,8 +30,6 @@ const Navbar = ({ setPage,currentPage }: NavbarProps) => {
         <h1 className={styles.logo} onClick={() => handleClick(0)}>
           dev<span className={styles.span}>Kevin.</span>
         </h1>
-
-        {/* Botón hamburguesa (solo visible en mobile) */}
         <button
           className={`${styles.hamburger} ${isMenuOpen ? styles.active : ""}`}
           onClick={toggleMenu}
@@ -42,13 +40,11 @@ const Navbar = ({ setPage,currentPage }: NavbarProps) => {
           <span></span>
         </button>
 
-        {/* Overlay para mobile */}
         <div
           className={`${styles.overlay} ${isMenuOpen ? styles.open : ""}`}
           onClick={toggleMenu}
         ></div>
 
-        {/* Menú (desktop y mobile) */}
         <ul className={`${styles.list} ${isMenuOpen ? styles.mobileOpen : ""}`}>
           {menuItems.map((item, index) => (
             <li

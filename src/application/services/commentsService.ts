@@ -2,7 +2,6 @@
 const API_URL = import.meta.env.PROD 
   ? "https://backend-my-portfolio-fpu6.onrender.com/api/comments"
   : "http://localhost:4000/api/comments";
-console.log('🔗 API_URL:', API_URL); 
 const CLOUDINARY_CLOUD_NAME = "dsmyghxcn"; 
 const CLOUDINARY_UPLOAD_PRESET = "portfolio_comments";
 
@@ -33,7 +32,7 @@ export const getComments = async (): Promise<Comment[]> => {
     }
     
     const data = await res.json();
-    console.log('Comentarios recibidos:', data);
+    
     return data;
   } catch (error) {
     console.error('Error en getComments:', error);
@@ -59,7 +58,7 @@ export const createComment = async (comment: Comment): Promise<Comment> => {
     }
     
     const data = await res.json();
-    console.log('Comentario creado:', data);
+   
     return data;
   } catch (error) {
     console.error('Error en createComment:', error);
@@ -84,7 +83,7 @@ export const deleteComment = async (id: string): Promise<void> => {
       throw new Error(`Error al eliminar comentario: ${res.status}`);
     }
     
-    console.log('Comentario eliminado:', id);
+    
   } catch (error) {
     console.error('Error en deleteComment:', error);
     throw error;
@@ -113,7 +112,7 @@ export const uploadImage = async (file: File): Promise<string> => {
     }
     
     const data = await res.json();
-    console.log('Imagen subida a Cloudinary:', data.secure_url);
+    
     return data.secure_url;
   } catch (error) {
     console.error('Error en uploadImage:', error);

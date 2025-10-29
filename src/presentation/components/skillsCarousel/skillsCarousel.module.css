@@ -1,0 +1,86 @@
+/* En skillsCarousel.module.css */
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  width: max-content;
+}
+
+.skillItem {
+  flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.skillItem:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Gradientes de fade en los bordes */
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.7) 30%,
+    transparent 100%
+  );
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.7) 30%,
+    transparent 100%
+  );
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .track {
+    gap: 1rem;
+  }
+  
+  .fadeLeft,
+  .fadeRight {
+    width: 50px;
+  }
+}

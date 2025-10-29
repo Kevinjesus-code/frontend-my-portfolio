@@ -20,6 +20,13 @@ interface CardCertificateProps {
 
 const CardCertificate = ({ certificate }: CardCertificateProps) => {
   const [showModal, setShowModal] = useState(false);
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
+  const displayedSkills = showAllSkills
+    ? certificate.skills
+    : certificate.skills.slice(0, 3);
+
+  const remainingSkills = certificate.skills.length - 3;
 
   return (
     <>
@@ -51,11 +58,27 @@ const CardCertificate = ({ certificate }: CardCertificateProps) => {
           </div>
 
           <div className={Styles.skillsContainer}>
-            {certificate.skills.map((skill, idx) => (
+            {displayedSkills.map((skill, idx) => (
               <span key={idx} className={Styles.skillTag}>
                 {skill}
               </span>
             ))}
+            {!showAllSkills && remainingSkills > 0 && (
+              <button
+                className={Styles.moreSkillsBtn}
+                onClick={() => setShowAllSkills(true)}
+              >
+                +{remainingSkills} más
+              </button>
+            )}
+            {showAllSkills && certificate.skills.length > 3 && (
+              <button
+                className={Styles.moreSkillsBtn}
+                onClick={() => setShowAllSkills(false)}
+              >
+                Ver menos
+              </button>
+            )}
           </div>
         </div>
 

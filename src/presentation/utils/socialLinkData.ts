@@ -18,8 +18,8 @@ export const socialLinks: SocialLinkData[] = [
   {
   id: 3,
   platform: "Gmail",
-  username: "kevinjesusmoresandoval@gmail.com",
-  url: "mailto:kevinjesusmoresandoval@gmail.com?subject=Hello%20Kevin&body=Hi%20there!",
+  username: "moresandovalkevinjesus@gmail.com",
+  url: "mailto:moresandovalkevinjesus@gmail.com",
   image: "/assets/svg/mail.svg", 
 }
 ];

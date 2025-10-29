@@ -57,6 +57,12 @@
   resize: none;
   min-height: 60px;
 }
+textarea::-webkit-scrollbar {
+  width: 1px;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 .inputForm textarea::placeholder {
   color: #64748b;

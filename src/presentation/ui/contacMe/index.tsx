@@ -9,7 +9,7 @@ const ContactMe = () => {
   return (
     <div className={Styles.container}>
       <div className={Styles.containerBody}>
-        <DSAContactMeMessage />
+        <DSAContactMeMessage  />
         <DSACardSocialLinks />
       </div>
       <DSACommentSection />

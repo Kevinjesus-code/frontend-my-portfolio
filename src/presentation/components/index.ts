@@ -14,3 +14,4 @@ export { default as DSACardSocialLinks } from "./cardSocialLinks";
 export { default as DSAComment } from "./coment";
 export { default as DSAFileUpload } from "./fileUpload";
 export { default as DSACommentSection } from "./comentSection";
+export { default as DSASkillsCarousel } from "./skillsCarousel";
